@@ -17,6 +17,8 @@ program
 var destinationPath = program.args.shift() || '.';
 
 var index   = fs.readFileSync(__dirname + '/templates/index.html');
+var edicon  = fs.readFileSync(__dirname + '/templates/.editorconfig');
+var ignore  = fs.readFileSync(__dirname + '/templates/.gitignore');
 var css     = fs.readFileSync(__dirname + '/templates/concise-css/concise.css')
 var cssMin  = fs.readFileSync(__dirname + '/templates/concise-css/concise.min.css')
 var js      = fs.readFileSync(__dirname + '/templates/js/concise.js');
@@ -46,6 +48,8 @@ function createApp(path) {
     util.mkdir(path + '/js');
 
     util.write(path + '/index.html', index);
+    util.write(path + '/.editorconfig', edicon);
+    util.write(path + '/.gitignore', ignore);
 
     if (program.prod) {
       util.write(path + '/css/concise.css', css)
