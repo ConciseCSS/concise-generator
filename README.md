@@ -6,7 +6,7 @@ This is an experimental version of Concise generator.
 
 ## Usage
 
-Meke sure you have [Node.js](http://nodejs.org) and NPM.
+Make sure you have [Node.js](http://nodejs.org) and NPM.
 
 Clone the repo
 ```
@@ -19,7 +19,7 @@ Now you can use this normaly.
 
 `concise [folder]`
 
-It's generate:
+The following structure gets generated:
 
 ```
 myproject
