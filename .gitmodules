@@ -1,0 +1,3 @@
+[submodule "concise.css"]
+	path = concise.css
+	url = git@github.com:ConciseCSS/concise.css.git
