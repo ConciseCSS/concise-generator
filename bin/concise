@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-'use strict';
 
 var program = require('commander');
-var path = require('path');
-var fs = require('fs');
+var path    = require('path');
+var fs      = require('fs');
 
-var util = require('./lib/util');
-var pkg = require('./package');
+var util = require('../lib/util');
+var pkg  = require('../package');
 
 program
   .usage('[folder]')
@@ -16,13 +15,17 @@ program
 
 var destinationPath = program.args.shift() || '.';
 
-var index   = fs.readFileSync(__dirname + '/templates/index.html');
-var edicon  = fs.readFileSync(__dirname + '/templates/.editorconfig');
-var ignore  = fs.readFileSync(__dirname + '/templates/.gitignore');
-var css     = fs.readFileSync(__dirname + '/templates/concise-css/concise.css')
-var cssMin  = fs.readFileSync(__dirname + '/templates/concise-css/concise.min.css')
-var js      = fs.readFileSync(__dirname + '/templates/js/concise.js');
-var jsMin   = fs.readFileSync(__dirname + '/templates/js/concise.min.js');
+// Copy templates files
+
+var index   = util.loadTemplate('index.html');
+var edicon  = util.loadTemplate('.editorconfig');
+var ignore  = util.loadTemplate('.gitignore');
+var css     = util.loadConcise('css/concise.css')
+var cssMin  = util.loadConcise('css/concise.min.css')
+var js      = util.loadConcise('js/concise.js');
+var jsMin   = util.loadConcise('js/concise.min.js');
+
+// Check if the folder is empty, confirm ovewrite and generate the app
 
 (function generateApp(path) {
   util.emptyDirectory(path, function(empty) {
@@ -40,6 +43,8 @@ var jsMin   = fs.readFileSync(__dirname + '/templates/js/concise.min.js');
     }
   });
 })(destinationPath);
+
+// Create all files to the project
 
 function createApp(path) {
   util.mkdir(path, function() {

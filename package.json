@@ -2,13 +2,13 @@
   "name": "concisecss-generator",
   "version": "0.1.0",
   "description": "The best way to start your project.",
-  "main": "index.js",
+  "main": "./bin/concise",
   "repository": {
     "type": "git",
     "url": "https://github.com/filipelinhares/expose-npm"
   },
   "bin": {
-    "concise": "index.js"
+    "concise": "./bin/concise"
   },
   "keywords": [
     "generator",
