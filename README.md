@@ -3,7 +3,7 @@
 
 ---
 
-# Important: This project is deprecated.
+## Important: This project is deprecated.
 
 ---
 
