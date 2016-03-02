@@ -1,6 +1,12 @@
 # ConciseCSS - Generator
 > The best way for you start your project!  
 
+---
+
+# Important: This project is deprecated.
+
+---
+
 ## Experimental version
 This is an experimental version of Concise generator.
 
