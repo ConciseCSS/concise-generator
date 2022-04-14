@@ -1,5 +1,10 @@
+<img src="https://keenanpayne.com/images/work/concise-logo.svg" alt="Concise.css logo" width="300">
+
 # ConciseCSS - Generator (Deprecated)
-> The best way for you start your project!  
+
+**The best way for you start your project!**
+
+> :warning: &nbsp; **Notice:** This project is not actively maintained. Reach out to [@keenanpayne](https://twitter.com/KeenanPayne_) or [@jaiheravi](https://twitter.com/jaiheravi) if you would like to chat about it ✌🏻
 
 ## Experimental version
 This is an experimental version of Concise generator.
